@@ -1,0 +1,296 @@
+.galleryIcon{display: flex;flex-wrap: wrap;justify-content: center;align-items: center;}
+.galleryIcon img{ max-width:140px}
+
+.galleryLearnmore{position: absolute;bottom: -20px; left: 40%; transform:translateX(-60%); } 
+.galleryLearnmore img{max-width: 15vw;}
+
+.section-container-main{
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+.section-container-main2{
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+.section-container {
+  display: flex;
+  transition: transform 0.5s ease;
+  height: 100%;
+  width: 100%;
+}
+.section-container2 {
+  display: flex;
+  transition: transform 0.5s ease;
+  height: 100%;
+  width: 100%;
+}
+.section-container-main .section-container .section {
+  flex: 0 0 100%;
+  height: 100%;
+  display: flex;
+  width: 100vw;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.section-container-main .section-container .section .row.galleryIcon{width:95%; margin: 20px 2.5%;}
+.section-container-main2 .section-container2 .section {
+  flex: 0 0 100%;
+  height: auto;
+  display: flex;
+  width: 100vw;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-size: contain;
+  background-position: center;
+  position: relative;
+}
+#section1 { background-image: url('../img2/galleryBg.png'); background-position: center top; background-size: contain; background-repeat: no-repeat;}
+#section2 { background-image: url('../img2/galleryBg.png'); background-position: center top; background-size: contain; background-repeat: no-repeat;}
+#section3 { background-image: url('../img2/galleryBg.png'); background-position: center top; background-size: contain; background-repeat: no-repeat;}
+#section4 { background-image: url('../img2/duckTreatBg-PC.jpg'); background-position: center top; background-size: contain; background-repeat: no-repeat;}
+#section5 { background-image: url('../img2/lambTreatBg-PC.jpg'); background-position: center top; background-size: contain; background-repeat: no-repeat;}
+#section6 { background-image: url('../img2/salmonTreatBg-PC.jpg'); background-position: center top; background-size: contain; background-repeat: no-repeat;}
+#section7 { background-image: url('../img2/whitefishTreatBg-PC.jpg'); background-position: center top; background-size: contain; background-repeat: no-repeat;}
+#section8 { background-image: url('../img2/venisonBg-PC.jpg'); background-position: center top; background-size: contain; background-repeat: no-repeat;}
+
+.productEdenLogo{
+  height: 12vh;
+}
+.productImg{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26%;
+  margin: 0 auto 0 auto;
+}
+.productImg img, .productTreatImg img{
+  margin-top: 0vh;
+  width: 100%;
+}
+.productTreatImg{
+  margin-top: 36vh;
+  width: 25%;
+}
+.productImg
+.fruit-images {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.treatIcons{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.fruit-image {
+  position: absolute;
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.image-one { bottom: 25vh; left: 25vw; }
+.image-two { bottom: 25vh; left: 34vw; }
+.image-three { bottom: 44vh; left: 3vw; }
+.image-four { bottom: 44vh; left: 30vw; }
+
+.treatIcons .image-one{bottom:5vh; left: 27vw}
+.treatIcons .image-two{bottom:5vh; left: 45vw} 
+.treatIcons .image-three{bottom:5vh; left: 55vw} 
+.treatIcons .image-four{bottom:5vh; left: 65vw}
+.treatIcons .image-two img,.treatIcons .image-three img,.treatIcons .image-four img{max-width: 60px}
+.fruit-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.caption {
+  position: absolute;
+  margin-top: 20px;
+  width: 100%;
+  text-align: center;
+  color: black;
+  padding: 20px;
+}
+.caption h5{width: 60%; margin: 0 20%;}
+.caption .title{
+  font-size: 4vw;
+}
+.caption .details{
+  font-size: 3.5vw;
+}
+
+#galleryContent{position: relative;}
+#prevButton, #nextButton{
+  position: absolute;
+  top: 80vh;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  font-size: 24px;
+  padding: 20px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+#prevButton { left: 20px; }
+#nextButton { right: 20px; }
+
+
+.addition {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  box-sizing: border-box;
+  max-height: 55%;
+  overflow-y: auto;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.addition.show {
+  transform: translateY(0);
+}
+/* Modal styling */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 99999; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+  z-index: 20000;
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 10px;
+  border: 1px solid #888;
+  width: 90%; /* Could be more or less, depending on screen size */
+  max-width: 800px; /* Maximum width for the modal */
+  border-radius: 8px;
+}
+
+.close {
+  color: #a00;
+  float: right;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+@media (min-width: 993px) and (max-width: 1440px){
+  .fruit-images{
+  position: absolute;
+  top: 0;
+  left: 30%;
+  width: 40%;
+  height: 100%;
+}
+ .caption{
+  z-index: 10000;
+  color: black;
+  left: 0%;
+  height: 100%;
+  margin: 0% auto 0% auto;
+ }
+ .caption .galleryLearnmore:hover;{transform: scale(1.1);color:#ab964e; transition: .4s}
+ .caption .details{
+  font-size: 15px;
+ }
+ .caption .title{
+   font-size: 20px;
+ }
+
+ .productImg, .productImg img{
+  margin-top: 0;
+  margin-bottom: 0px;
+ }
+}
+@media (max-width: 992px){
+  .galleryLearnmore img{max-width: 25vw;}
+  .galleryIcon img{ max-width:120px}
+  .image-one { bottom: 39vh; left: 15vw; }
+  .image-two { bottom: 39vh; left: 25vw; }
+  .image-three { bottom: 36vh; left: 25vw; }
+  .image-four { bottom: 36vh; left: 66vw; }
+
+  .productTreatImg{
+    margin-top: 26vh;
+    width: 45%;
+}
+  .treatIcons .image-one{bottom:30vh; left: 20vh}
+  .treatIcons .image-two{bottom:30vh; left: 56vw}
+  .treatIcons .image-three{bottom:30vh; left: 66vw} 
+  .treatIcons .image-four{bottom:30vh; left: 76vw}
+  .caption{
+    z-index: 10000;
+    color: black;
+    left: 0%;
+    height: 100%;
+    margin: -20px auto 0% auto;
+ }
+ .caption .details{font-size: 3vw;}
+}
+@media (max-width:440px){
+  #prevButton { left: 0px; }
+  #nextButton { right: 0px; }
+  .caption {left: 0%;}
+  .galleryLearnmore{position: absolute;bottom: 25vh; left: 10%;}
+  .galleryLearnmore img{max-width: 40vw;}
+  #prevButton, #nextButton,#prevButton2, #nextButton2 {
+  position: absolute;
+  top: 30vh;
+}
+.productImg {width: 66%;}
+  .productTreatImg{
+    margin-top: 24vh;
+    width: 45%;
+}
+.section-container2 .section .caption{margin-top: 24vh}
+.productEdenLogo{
+  height: 6vh;
+}
+.caption p{font-size: 8px}
+.galleryIcon img{ max-width:90px}
+.fruit-images img{max-width: 100px}
+.treatIcons img{max-width: 80px}
+  .image-three { bottom: 23vh; left: 8vw; }
+  .image-four { bottom: 23vh; left: 72vw; }
+  .treatIcons .image-one{bottom:25vh; left: 5vh}
+  .treatIcons .image-two{bottom:25vh; left: 46vw}
+  .treatIcons .image-three{bottom:27vh; left: 63vw} 
+  .treatIcons .image-four{bottom:30vh; left: 82vw}
+#section4 { background-image: url('../img2/duckTreatBg-mobile.jpg'); background-position: center top; background-size: contain; background-repeat: no-repeat;}
+#section5 { background-image: url('../img2/lambTreatBg-mobile.jpg'); background-position: center top; background-size: contain; background-repeat: no-repeat;}
+#section6 { background-image: url('../img2/salmonTreatBg-mobile.jpg'); background-position: center top; background-size: contain; background-repeat: no-repeat;}
+#section7 { background-image: url('../img2/whitefishTreatBg-mobile.jpg'); background-position: center top; background-size: contain; background-repeat: no-repeat;}
+#section8 { background-image: url('../img2/venisonBg-mobile.jpg'); background-position: center top; background-size: contain; background-repeat: no-repeat;}
+
+}
