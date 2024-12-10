@@ -264,9 +264,7 @@
   position: absolute;
   top: 30vh;
 }
-@media (max-width:380px){
-  .galleryLearnmore{position: absolute;bottom: 17vh; left: 25%;}
-}  
+ 
 #prevButton{left:0}
 #nextButton{right:0}
 .productImg {width: 66%;}
@@ -294,4 +292,4 @@
 #section8 { background-image: url('../img2/venisonBg-mobile.jpg'); background-position: center top; background-size: contain; background-repeat: no-repeat;}
 
 }
-@media (max-width:380px){.galleryLearnmore{position: absolute;bottom: 20vh; left: 25%;}
+@media (max-width:380px){.galleryLearnmore{position: absolute;bottom: 17vh; left: 25%;}
