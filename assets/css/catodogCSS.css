@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Oswald:200');
+
+main{
+     position: relative;
+     z-index: 1;
+     min-height: 100vh;
+     border-top: 1px solid #3e1914;
+     padding: 0;
+     max-width: 1880px;
+     margin: 0;
+}
+a.toMainrange{color: transparent;}
+.toMainrange{
+    position: absolute; padding:100px;transition: 0.5s;
+    bottom: -62%; right: 0%;color: transparent;z-index: 10000;}
+.toMainrange:hover{cursor: pointer;}
+.carousel-item {margin-top: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+        .video-container {
+            position: relative;
+            width: 100vw;
+            height: 77vw;
+        }
+        .video-container img{
+            width: 100%;
+            height: auto;
+        }
+        .video-container video {
+            width: 67%;
+            height: 56%;
+            object-fit: cover;
+        }
+        .brand-icon {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 50px;
+            height: 80vh;
+            z-index: 2;
+        }
+        .mainrange-caption a{
+            position: absolute;
+            bottom: 25.5%;
+            right:9.5%;
+            color: white;
+            transition: 0.5s;
+            font-size: 1.75vw;
+            font-family: allrounder;
+            z-index: 99999;
+        }
+        .mainrange-caption:hover{
+            color: #333;
+            transition: 0.5s;
+            transform: scale(1.05);
+            cursor: pointer;
+        }
+@media (min-width: 769px){
+  .catodogBanner button{display: none !important}
+  .catodogBanner{margin-top: 33vh;
+    background: url(../img/banner_bg_pc.webp);
+    padding: 10%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    height: 75vw;}
+    .carousel-item {
+      height: 60%;
+    }
+
+  .bannerCaption-PC{display: block; width: 100%;}
+  .bannerCaption-mobile{display: none; width: 100%;}
+  .catodogTheme-PC{display: block; width: 100%;}
+  .catodogTheme-mobile{display: none; width: 100%;}
+  #p1,#p2,#p3,#p4,#p5,#p6, #p7, #p8{display: block}
+  #p9,#p10,#p11,#p12, #p13,#p14,#p15,#p16{display: none;}
+}
+@media (max-width: 768px){
+    .catodogBanner{
+        background: url(../img/banner_bg_mobile.webp);
+        margin-top: 120px;
+        height: 150vw;
+    }
+    .toMainrange{
+    position: absolute; padding:100px;transition: 0.5s;
+    bottom: 20%; right: 0%;color: transparent;z-index: 10000;}
+    .video-container {
+          height: 157vw;
+        }
+    .video-container video {
+        margin: 0 5% 0 5%;
+        width: 90%;
+        height: 45%;
+        object-fit: cover;
+    }
+    .mainrange-caption a{
+    bottom: 31%;
+    right:38%;
+    font-size: 2vw;
+    }
+
+    .parallax {
+     height: 126vw;
+}
+.parallax div.banner-text {font-size: 2.2rem; top:30%}
+  .bannerCaption-PC{display: none; width: 100%;}
+  .bannerCaption-mobile{display: block; width: 100%;}
+  .catodogTheme-PC{display: none; width: 100%;}
+  .catodogTheme-mobile{display: block; width: 100%;}
+}

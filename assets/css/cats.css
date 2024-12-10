@@ -1,0 +1,208 @@
+/*body {
+  cursor: url("https://raw.githubusercontent.com/YitingLiu/poem/master/codepen/mouse.png") 39 39, auto;
+  cursor: url("https://i.postimg.cc/nz3BS1JL/Eden-cat-wet-food-original.webp") 39 39, auto;
+  https://assets.codepen.io/174183/spiral_1.png
+  https://raw.githubusercontent.com/elsemeow/cdn/main/img/cdpn/gOwYMNR/cursor-default.png
+  <link rel="icon" type="image/png" href="https://i.postimg.cc/Nf8M6szk/mrbean.jpg">
+}*/
+#banner {
+    overflow: hidden;
+    background: #eaeaea;
+    cursor: url(https://i.postimg.cc/8P4GSQNp/mouse.png) 10 10, auto;
+}
+
+/* Fallback cursor */
+body {
+    cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/240751/point.png") 55 39, auto;
+}
+#artboard {
+  margin: 10px auto;
+  width: 100%;
+  height: 765px;
+  padding: 0px;
+}
+.cell {
+  position: relative;
+  box-sizing: border-box;
+  display: inline-block;
+  width: 80px;
+  height: 144px;
+  margin: 0px 0px 5px 5px;
+  padding: 0px;
+}
+.cell div {
+  position: absolute;
+}
+.ear {
+  top: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+.ear.ear-left {
+  left: 0;
+  border-width: 24px 0 0 24px;
+  border-color: transparent transparent transparent #818591;
+}
+.ear.ear-right {
+  right: 0;
+  border-width: 24px 24px 0 0;
+  border-color: transparent #818591 transparent transparent;
+}
+.body {
+  width: 100%;
+  height: 120px;
+  top: 24px;
+  background: #818591;
+}
+.neck {
+  width: 100%;
+  height: 8.64px;
+  background: #BAAB89;
+  top: 79.2px;
+}
+.bell {
+  width: 12.8px;
+  height: 12.8px;
+  top: 85.6px;
+  left: 33.6px;
+  background: #853650;
+  border-radius: 50%;
+}
+.nose {
+  width: 12px;
+  height: 9.6px;
+  top: 54.72px;
+  left: 34px;
+  background: #f7cac9;
+  border-radius: 40% 40% 70% 70%;
+}
+.mouth {
+  width: 12.8px;
+  height: 8px;
+  top: 63.36px;
+  border-style: solid;
+  border-color: #f7cac9;
+}
+.mouth.mouth-left {
+  right: 39px;
+  border-width: 0 2px 2px 0;
+  border-radius: 0 0 50% 50Array/0Array 0 80% 80%;
+}
+.mouth.mouth-right {
+  left: 39px;
+  border-width: 0 0 2px 2px;
+  border-radius: 0 0 50% 50Array/0Array 0 80% 80%;
+}
+.eye {
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 50%;
+  top: 36px;
+}
+.eye.eye-left {
+  left: 12px;
+}
+.eye.eye-right {
+  right: 12px;
+}
+.eyeball {
+  width: 9.6px;
+  height: 9.6px;
+  background: #000;
+  border-radius: 50%;
+  top: 41.2px;
+}
+.eyeball.eyeball-left {
+  left: 17.2px;
+}
+.eyeball.eyeball-right {
+  right: 17.2px;
+}
+.whisker {
+  width: 28px;
+  height: 1px;
+  background: #200007;
+  border-radius: 1px;
+}
+.whisker.whisker-left-1 {
+  top: 57.6px;
+}
+.whisker.whisker-left-2 {
+  width: 24px;
+  top: 63.36px;
+  transform: rotatez(-11deg);
+}
+.whisker.whisker-left-3 {
+  top: 69.12px;
+  transform: rotatez(-25deg);
+}
+.whisker.whisker-right-1 {
+  right: 0;
+  top: 57.6px;
+}
+.whisker.whisker-right-2 {
+  right: 0;
+  width: 24px;
+  top: 63.36px;
+  transform: rotatez(11deg);
+}
+.whisker.whisker-right-3 {
+  right: 0;
+  top: 69.12px;
+  transform: rotatez(25deg);
+}
+.cell:nth-child(2n+1) .body {
+  background: #FE9258;
+}
+.cell:nth-child(2n+1) .ear {
+  border-color: transparent #CE9258;
+}
+.cell:nth-child(3n+2) .body {
+  background: #D3E9FD;
+}
+.cell:nth-child(3n+2) .ear {
+  border-color: transparent #D3E9FD;
+}
+.cell:nth-child(5n+3) .body {
+  background: #85512A;
+}
+.cell:nth-child(5n+3) .ear {
+  border-color: transparent #85512A;
+}
+.cell:nth-child(7n+5) .body {
+  background: #688E9C;
+}
+.cell:nth-child(7n+5) .ear {
+  border-color: transparent #688E9C;
+}
+.cell:nth-child(3n) .neck {
+  background: #48408D;
+}
+.cell:nth-child(5n) .neck {
+  background: #BFD992;
+}
+.cell:nth-child(7n) .neck {
+  background: #5BC2E9;
+}
+.cell:nth-child(7n+2) .bell {
+  background: #48408D;
+}
+.cell:nth-child(3n+1) .bell {
+  background: #BFD992;
+}
+.cell:nth-child(5n+7) .bell {
+  background: #5BC2E9;
+}
+.cell:nth-child(5n) .eye {
+  animation: blink 2s ease-in-out 1158ms infinite normal forwards running;
+}
+@keyframes blink {
+  0% {
+    transform: scaley(0);
+  }
+  10%, 100% {
+    transform: scaley(1);
+  }
+}
