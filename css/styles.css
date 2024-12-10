@@ -398,7 +398,7 @@ a:hover {
   position: fixed;
   z-index: 99999;
   place-items: center;
-  top: 42%;
+  top: 25%;
   right: 4%;
   animation: spin 60s linear infinite;
 }
