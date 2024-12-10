@@ -265,7 +265,7 @@
   top: 30vh;
 }
 @media (max-width:380px){
-  .galleryLearnmore{position: absolute;bottom: 18vh; left: 25%;}
+  .galleryLearnmore{position: absolute;bottom: 17vh; left: 25%;}
 }  
 #prevButton{left:0}
 #nextButton{right:0}
