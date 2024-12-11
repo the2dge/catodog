@@ -1040,6 +1040,8 @@ a:hover {
     }
     #healthScience .container .row:nth-child(2) p{font-size: 3.3vw}
 }
+
+
 /* ///////////////////////////////////////////////////////////////////// 
 //  REVIEWS 
 /////////////////////////////////////////////////////////////////////*/
@@ -1138,10 +1140,13 @@ ul.slick-dots{margin: 50px auto;}
  background: #fcfcfc;
  z-index: 10000;
 }
-#gallery2{
- position: relative;
- background: #fcfcfc;
- z-index: 10000;
+@media (max-width:560px){}
+#gallery .section-container{height: 120vw;margin-bottom: 4vh}
+@media (max-width:560px){
+#gallery .section-container{height: 166vw;margin-bottom: 4vh}
+#gallery #section1,#gallery #section2,#gallery #section3{
+    height: 100%;
+}
 }
 #screenshots .item{
   padding: 0px 0px;
