@@ -262,7 +262,7 @@
   .galleryLearnmore img{max-width: 40vw;}
   #prevButton, #nextButton,#prevButton2, #nextButton2 {
   position: absolute;
-  top: 30vh;
+  top: 50vh;
 }
 #prevButton{left:0}
 #nextButton{right:0}
