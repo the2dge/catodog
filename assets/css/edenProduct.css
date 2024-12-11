@@ -258,7 +258,7 @@
 @media (max-width:440px){
 
   .caption {left: 10%;}
-  .galleryLearnmore{position: absolute;bottom: 22vh; left: 25%;}
+  .galleryLearnmore{position: absolute;bottom: 0vh; left: 25%;}
   .galleryLearnmore img{max-width: 40vw;}
   #prevButton, #nextButton,#prevButton2, #nextButton2 {
   position: absolute;
@@ -281,14 +281,14 @@
 .treatIcons img{max-width: 80px}
 
 
-#section1 { background-image: url('../img/turkeyFront-mobile.webp'); background-position: center top; background-size: contain; background-repeat: no-repeat;}
-#section2 { background-image: url('../img/duckFront-mobile.webp'); background-position: center top; background-size: contain; background-repeat: no-repeat;}
-#section3 { background-image: url('../img/whitefishFront-mobile.webp'); background-position: center top; background-size: contain; background-repeat: no-repeat;} 
-#section4 { background-image: url('../img2/duckTreatBg-mobile.jpg'); background-position: center top; background-size: contain; background-repeat: no-repeat;}
-#section5 { background-image: url('../img2/lambTreatBg-mobile.jpg'); background-position: center top; background-size: contain; background-repeat: no-repeat;}
-#section6 { background-image: url('../img2/salmonTreatBg-mobile.jpg'); background-position: center top; background-size: contain; background-repeat: no-repeat;}
-#section7 { background-image: url('../img2/whitefishTreatBg-mobile.jpg'); background-position: center top; background-size: contain; background-repeat: no-repeat;}
-#section8 { background-image: url('../img2/venisonBg-mobile.jpg'); background-position: center top; background-size: contain; background-repeat: no-repeat;}
+#section1 { background-image: url('../img/turkeyFront-mobile.webp'); background-position: center bottom; background-size: contain; background-repeat: no-repeat;}
+#section2 { background-image: url('../img/duckFront-mobile.webp'); background-position: center bottom; background-size: contain; background-repeat: no-repeat;}
+#section3 { background-image: url('../img/whitefishFront-mobile.webp'); background-position: center bottom; background-size: contain; background-repeat: no-repeat;} 
+#section4 { background-image: url('../img2/duckTreatBg-mobile.jpg'); background-position: center bottom; background-size: contain; background-repeat: no-repeat;}
+#section5 { background-image: url('../img2/lambTreatBg-mobile.jpg'); background-position: center bottom; background-size: contain; background-repeat: no-repeat;}
+#section6 { background-image: url('../img2/salmonTreatBg-mobile.jpg'); background-position: center bottom; background-size: contain; background-repeat: no-repeat;}
+#section7 { background-image: url('../img2/whitefishTreatBg-mobile.jpg'); background-position: center bottom; background-size: contain; background-repeat: no-repeat;}
+#section8 { background-image: url('../img2/venisonBg-mobile.jpg'); background-position: center bottom; background-size: contain; background-repeat: no-repeat;}
 
 }
-@media (max-width:380px){.galleryLearnmore{position: absolute;bottom: 20vh; left: 25%;}
+@media (max-width:380px){.galleryLearnmore{position: absolute;bottom: 0vh; left: 22%;}
