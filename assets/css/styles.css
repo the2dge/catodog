@@ -364,6 +364,8 @@ a:hover {
     #logo_menu .col-xs-10 h5 { top: 57%;left: 40%;font-size: 1.8vw;letter-spacing: 0.4px;}
 }
 
+.catodogBanner .owl-dots button{width: 10px; height: 10px; border-color: transparent;border-radius: 50%; background: transparent;}
+.catodogBanner button.active{background: transparent;}
 /* ///////////////////////////////////////////////////////////////////// 
 //  06 - Banner
 /////////////////////////////////////////////////////////////////////*/
@@ -1066,7 +1068,8 @@ a:hover {
 
 
 #partner-slider .owl-dots{height: 44px;display: flex; justify-content: center; align-items: center; margin: 15px auto;}
-.owl-dots button{width: 10px; height: 15px; border-color: black;border-radius: 50%}
+.owl-dots button{width: 10px; height: 10px; border-radius: 50%; background: #f0f0f0;}
+button.active{background: #333;}
 
 #partner-slider .owl-nav{display: none;}
 button.owl-prev, button.owl-next{display: none}
@@ -1427,6 +1430,7 @@ ul.slick-dots{margin: 50px auto;}
    position: absolute;top:50%;
 }
 .owl-dots button{margin: 3px}
+
 #events .container .row:nth-child(2){
   height: auto;
 }
