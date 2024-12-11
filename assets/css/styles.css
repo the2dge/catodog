@@ -366,6 +366,7 @@ a:hover {
 
 .catodogBanner .owl-dots button{width: 10px; height: 10px; border-color: transparent;border-radius: 50%; background: transparent;}
 .catodogBanner button.active{background: transparent;}
+.owl-dots.disalbed{display: none;}
 /* ///////////////////////////////////////////////////////////////////// 
 //  06 - Banner
 /////////////////////////////////////////////////////////////////////*/
