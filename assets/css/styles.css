@@ -174,7 +174,7 @@ a:hover {
 */
 .sidebar-nav {
     position: absolute;
-    width: 200px;
+    width: 260px;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -364,7 +364,7 @@ a:hover {
     #logo_menu .col-xs-10 h5 { top: 57%;left: 40%;font-size: 1.8vw;letter-spacing: 0.4px;}
 }
 
-.catodogBanner .owl-dots button{width: 10px; height: 10px; border-color: transparent;border-radius: 50%; background: transparent;}
+.catodogBanner .owl-dots button{width: 5px; height: 5px; border-color: transparent;border-radius: 50%; background: transparent;}
 .catodogBanner button.active{background: transparent;}
 .owl-dots.disalbed{display: none;}
 /* ///////////////////////////////////////////////////////////////////// 
@@ -763,7 +763,7 @@ a:hover {
 
 }
 @media (min-width:769px){
-    #mainRange .owl-dots button{width: 10px; height: 15px; border-color: transparent;border-radius: 50%}
+    #mainRange .owl-dots button{width: 5px; height: 5px; border: 0px transparent;border-radius: 50%; background: grey}
 
 }
 @media (max-width:768px){
@@ -1069,8 +1069,8 @@ a:hover {
 
 
 #partner-slider .owl-dots{height: 44px;display: flex; justify-content: center; align-items: center; margin: 15px auto;}
-.owl-dots button{width: 10px; height: 10px; border-radius: 50%; background: #f0f0f0;}
-button.active{background: #333;}
+.owl-dots button{border: 0px transparent;width: 8px; height: 12px; border-radius: 50%; background: #aaa;}
+button.active{background: #555;}
 
 #partner-slider .owl-nav{display: none;}
 button.owl-prev, button.owl-next{display: none}
