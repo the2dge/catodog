@@ -48,6 +48,9 @@
 	    <ul class="sidebar-nav">
 		    <li><a href="#home">Home</a></li>
             <li><a href="#mainRange">Eden 精選</a></li>
+            <li><a href="#mainRange_cat">Eden Feline Feast 貓糧</a></li>
+            <li><a href="#mainRange_dog">Eden The Cuisine 狗糧</a></li>
+            <li><a href="#mainRange_treat">Eden Game Meat Air Dry Treat <br><span style="margin-left: 20px;">風乾零食</span></a></li>
             <li><a href="#partner">Reviews/顧客說</a></li>
             <li><a href="#partners">Partners/零售點</a></li>
             <li><a href="#events">Events/活動記錄</a></li>
@@ -647,7 +650,42 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
 });
-
+//Listen to Sidebar clicks
+document.querySelector('a[href="#mainRange_cat"]').addEventListener('click', function() {
+    // Hide the treat container
+    document.querySelector('.treatContainer').style.display = "none";
+    
+    // Load the mainrange HTML
+    loadMainrangeImg('mainrange.html');
+    
+    // Load the gallery HTML
+    loadGallery('gallery.html', main_fileNames);
+    
+    // Show the main range container
+    document.getElementById('mainrangeContainer').style.display = 'block';
+    
+    // Scroll slightly up
+    scrollSomeUp();
+});
+document.querySelectorAll('a[href="#mainRange_treat"]').forEach(function(middleSelect) {
+    // Add click event listener to each "middleSelect" element
+    middleSelect.addEventListener('click', function() {
+        // Hide the main range container
+        document.getElementById('mainrangeContainer').style.display = 'none';
+        
+        // Load the treat HTML
+        loadTreatImg('treat.html');
+        
+        // Load the gallery HTML
+        loadGallery('gallery2.html', treat_fileNames);
+        
+        // Show the treat container
+        document.querySelector('.treatContainer').style.display = "block";
+        
+        // Scroll slightly up
+        scrollSomeUp();
+    });
+});
 // Select all elements with the class "leftSelect"
 document.querySelectorAll('.leftSelect').forEach(function(leftSelect) {
     // Add click event listener to each "leftSelect" element
