@@ -217,6 +217,8 @@
         
        
     </section>  <!-- END of Treat container-->  
+    <section class="dogfoodContainer"  style="display: none;position: relative; width: 100vw;margin:0;padding:0;transform: translateX(-10%);">   
+    </section>  <!-- END of Treat container--> 
     </section>
 
 
@@ -578,6 +580,7 @@
 <script type="text/javascript">
 const main_fileNames = ['turkey.html', 'duck.html', 'fish.html'];
 const treat_fileNames = ['duckTreat.html', 'lambTreat.html', 'salmonTreat.html', 'whitefishTreat.html', 'venisonTreat.html'];
+const dogfood_fileNames = ['dogOriginal.html', 'dogCountry.html', 'dogFish.html'];
 const modal = document.getElementById('modal');
 const modalBody = document.getElementById('modal-body');
 
@@ -652,8 +655,9 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 //Listen to Sidebar clicks
 document.querySelector('a[href="#mainRange_cat"]').addEventListener('click', function() {
-    // Hide the treat container
+    // Hide the treat and dogfood container
     document.querySelector('.treatContainer').style.display = "none";
+    document.querySelector('.dogfoodContainer').style.display = "none";
     
     // Load the mainrange HTML
     loadMainrangeImg('mainrange.html');
@@ -667,11 +671,29 @@ document.querySelector('a[href="#mainRange_cat"]').addEventListener('click', fun
     // Scroll slightly up
     scrollSomeUp();
 });
+document.querySelector('a[href="#mainRange_dog"]').addEventListener('click', function() {
+    // Hide the treat and dogfood container
+    document.querySelector('.treatContainer').style.display = "none";
+    document.querySelector('.mainrangeContainer').style.display = "none";
+    
+    // Load the dogfood HTML
+    loadDogfoodImg('dogfood.html');
+    
+    // Load the gallery HTML
+    loadGallery('gallery3.html', dogfood_fileNames);
+    
+    // Show the main range container
+    document.querySelector('.dogfoodContainer').style.display = 'block';
+    
+    // Scroll slightly up
+    scrollSomeUp();
+});
 document.querySelectorAll('a[href="#mainRange_treat"]').forEach(function(middleSelect) {
     // Add click event listener to each "middleSelect" element
     middleSelect.addEventListener('click', function() {
         // Hide the main range container
         document.getElementById('mainrangeContainer').style.display = 'none';
+        document.querySelector('.dogfoodContainer').style.display = "none";
         
         // Load the treat HTML
         loadTreatImg('treat.html');
@@ -692,6 +714,7 @@ document.querySelectorAll('.leftSelect').forEach(function(leftSelect) {
     leftSelect.addEventListener('click', function() {
         // Hide the treat container
         document.querySelector('.treatContainer').style.display = "none";
+        document.querySelector('.dogfoodContainer').style.display = "none";
         
         // Load the mainrange HTML
         loadMainrangeImg('mainrange.html');
@@ -706,31 +729,34 @@ document.querySelectorAll('.leftSelect').forEach(function(leftSelect) {
         scrollSomeUp();
     });
 });
-/* for only one .leftSelect case
-document.querySelector('.leftSelect').addEventListener('click', function() {
-    document.querySelector('.treatContainer').style.display ="none";
-    loadMainrangeImg('mainrange.html');
-    loadGallery('gallery.html', main_fileNames);
-    document.getElementById('mainrangeContainer').style.display = 'block';
-
-    scrollSomeUp();
-});*/
-//was .rightSelect
-/*
-document.querySelector('.middleSelect').addEventListener('click', function() {
-    document.getElementById('mainrangeContainer').style.display = 'none';
-    
-    loadTreatImg('treat.html');
-    loadGallery('gallery2.html', treat_fileNames);
-    document.querySelector('.treatContainer').style.display ="block";
-    scrollSomeUp();
-});*/
+// Select all elements with the class "rightSelect"
+document.querySelectorAll('.rightSelect').forEach(function(rightSelect) {
+    // Add click event listener to each "leftSelect" element
+    rightSelect.addEventListener('click', function() {
+        // Hide the treat and catfood container
+        document.querySelector('.treatContainer').style.display = "none";
+        document.querySelector('.mainrangeContainer').style.display = "none";
+        
+        // Load the dogfood HTML
+        loadDogfoodImg('dogfood.html');
+        
+        // Load the gallery HTML
+        loadGallery('gallery3.html', dogfood_fileNames);
+        
+        // Show the dogfood container
+        document.querySelector('.dogfoodContainer').style.display = "block";
+        
+        // Scroll slightly up
+        scrollSomeUp();
+    });
+});
 // Select all elements with the class "middleSelect"
 document.querySelectorAll('.middleSelect').forEach(function(middleSelect) {
     // Add click event listener to each "middleSelect" element
     middleSelect.addEventListener('click', function() {
         // Hide the main range container
         document.getElementById('mainrangeContainer').style.display = 'none';
+        document.querySelector('.dogfoodContainer').style.display = "none";
         
         // Load the treat HTML
         loadTreatImg('treat.html');
@@ -751,6 +777,15 @@ function loadTreatImg(treatFile) {
         .then(response => response.text())
         .then(data => {
             document.querySelector('.treatContainer').innerHTML = data;
+            
+        })
+        .catch(error => console.error('Error loading treatFile', error));
+}
+function loadDogfoodImg(treatFile) {
+     fetch(treatFile)
+        .then(response => response.text())
+        .then(data => {
+            document.querySelector('.dogfoodContainer').innerHTML = data;
             
         })
         .catch(error => console.error('Error loading treatFile', error));
