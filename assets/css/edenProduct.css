@@ -1,7 +1,7 @@
 .galleryIcon{display: flex;flex-wrap: wrap;justify-content: center;align-items: center;}
 .galleryIcon img{ width: 16%;max-width:140px}
 
-.galleryLearnmore{position: absolute;bottom: -2px; left: 33vw;}
+.galleryLearnmore{position: absolute;bottom: -10px; left: 33vw;}
 .galleryLearnmore img{max-width: 20vw;}
 
 .section-container-main{
@@ -289,6 +289,9 @@
 #section6 { background-image: url('../img2/salmonTreatBg-mobile.jpg'); background-position: center bottom; background-size: contain; background-repeat: no-repeat;}
 #section7 { background-image: url('../img2/whitefishTreatBg-mobile.jpg'); background-position: center bottom; background-size: contain; background-repeat: no-repeat;}
 #section8 { background-image: url('../img2/venisonBg-mobile.jpg'); background-position: center bottom; background-size: contain; background-repeat: no-repeat;}
+#section9 { background-image: url('../img2/originDogfood.jpg'); background-position: center bottom; background-size: contain; background-repeat: no-repeat;}
+#section10 { background-image: url('../img2/countryDogfood.jpg'); background-position: center bottom; background-size: contain; background-repeat: no-repeat;}
+#section11 { background-image: url('../img2/fishDogfood.jpg'); background-position: center bottom; background-size: contain; background-repeat: no-repeat;}
 
 }
 @media (max-width:380px){.galleryLearnmore{position: absolute;bottom: 0vh; left: 22%;}
