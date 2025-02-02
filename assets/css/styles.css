@@ -770,10 +770,10 @@ a:hover {
 
 #mainRange{
    background-image: url(../img/mainrangeBg_mobile.jpeg);
-   background-size: cover;
+   background-size: contain;
    background-repeat: no-repeat;
    background-position: top;
-
+   margin-top: 0;
 }
 .mainRange .selectContainer{height: 140vw; margin-top:10vh;}
 .leftSelect, .rightSelect, .middleSelect{
