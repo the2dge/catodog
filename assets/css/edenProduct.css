@@ -61,6 +61,9 @@
 #section6 { background-image: url('../img2/salmonTreatBg-PC.jpg'); background-position: center top; background-size: contain; background-repeat: no-repeat;}
 #section7 { background-image: url('../img2/whitefishTreatBg-PC.jpg'); background-position: center top; background-size: contain; background-repeat: no-repeat;}
 #section8 { background-image: url('../img2/venisonBg_pc.jpg'); background-position: center top; background-size: contain; background-repeat: no-repeat;}
+#section9 { background-image: url('../img2/originDogfood_PC.jpg'); background-position: center bottom; background-size: contain; background-repeat: no-repeat;}
+#section10 { background-image: url('../img2/countryDogfood_PC.jpg'); background-position: center bottom; background-size: contain; background-repeat: no-repeat;}
+#section11 { background-image: url('../img2/fishDogfood_PC.jpg'); background-position: center bottom; background-size: contain; background-repeat: no-repeat;}
 
 .productEdenLogo{
   height: 12vh;
@@ -289,9 +292,9 @@
 #section6 { background-image: url('../img2/salmonTreatBg-mobile.jpg'); background-position: center bottom; background-size: contain; background-repeat: no-repeat;}
 #section7 { background-image: url('../img2/whitefishTreatBg-mobile.jpg'); background-position: center bottom; background-size: contain; background-repeat: no-repeat;}
 #section8 { background-image: url('../img2/venisonBg-mobile.jpg'); background-position: center bottom; background-size: contain; background-repeat: no-repeat;}
-#section9 { background-image: url('../img2/originDogfood.jpg'); background-position: center bottom; background-size: contain; background-repeat: no-repeat;}
-#section10 { background-image: url('../img2/countryDogfood.jpg'); background-position: center bottom; background-size: contain; background-repeat: no-repeat;}
-#section11 { background-image: url('../img2/fishDogfood.jpg'); background-position: center bottom; background-size: contain; background-repeat: no-repeat;}
+#section9 { background-image: url('../img2/originDogfood_mobile.jpg'); background-position: center bottom; background-size: contain; background-repeat: no-repeat;}
+#section10 { background-image: url('../img2/countryDogfood_mobile.jpg'); background-position: center bottom; background-size: contain; background-repeat: no-repeat;}
+#section11 { background-image: url('../img2/fishDogfood_mobile.jpg'); background-position: center bottom; background-size: contain; background-repeat: no-repeat;}
 
 }
 @media (max-width:380px){.galleryLearnmore{position: absolute;bottom: 0vh; left: 22%;}
