@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Introduction of Premium Dog Food </title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    .content picture, .content img {
+        width: 100%;
+        display: block;
+    }
+    .mobile-images {
+        display: none;
+    }
+    @media (max-width: 559px) {
+        .desktop-image {
+            display: none;
+        }
+        .mobile-images {
+            display: block;
+        }
+    }
+    @media screen and (min-width: 1440px) {
+    /* Target the 2nd and 3rd images */
+    .desktop-image img{
+        background: #f0f0f0;
+        padding-left: 10%; /* 10% padding on the left */
+        padding-right: 10%; /* 10% padding on the right */
+        box-sizing: border-box; /* Ensure padding is included in the element's width */
+    }
+}
+</style>
+</head>
+<body>
+<section class="content">
+    <!-- Desktop image -->
+    <div class="desktop-image">
+    <img src="assets/img2/cuisine_intro1_PC.jpg">
+	<img src="assets/img2/cuisine_intro2_PC.jpg">
+	<img src="assets/img2/cuisine_intro3_PC.jpg">
+	<img src="assets/img2/cuisine_intro4_PC.jpg">
+	<img src="assets/img2/cuisine_intro5_PC.jpg">
+    <img src="assets/img2/cuisine_intro6_PC.jpg">
+    </div>
+    
+    <!-- Mobile images -->
+    <div class="mobile-images">
+    <img src="assets/img2/cuisine_intro1_mobile.jpg">
+	<img src="assets/img2/cuisine_intro2_mobile.jpg">
+	<img src="assets/img2/cuisine_intro3_mobile.jpg">
+	<img src="assets/img2/cuisine_intro4_mobile.jpg">
+	<img src="assets/img2/cuisine_intro5_mobile.jpg">
+    <img src="assets/img2/cuisine_intro6_mobile.jpg">
+	<img src="assets/img2/cuisine_intro7_mobile.jpg" style="margin-bottom: 50px;">
+    </div>
+</section>
+</body>
+</html>

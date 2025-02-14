@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Introduction of Treat and Games for Cats and Dogs </title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    .content picture, .content img {
+        width: 100%;
+        display: block;
+    }
+    .mobile-images {
+        display: none;
+    }
+    @media (max-width: 559px) {
+        .desktop-image {
+            display: none;
+        }
+        .mobile-images {
+            display: block;
+        }
+    }
+        @media screen and (min-width: 1200px) {
+    /* Target the 2nd and 3rd images */
+    .desktop-image img:nth-child(2),
+    .desktop-image img:nth-child(3) {
+        background: #f0f0f0;
+        padding-left: 10%; /* 10% padding on the left */
+        padding-right: 10%; /* 10% padding on the right */
+        box-sizing: border-box; /* Ensure padding is included in the element's width */
+    }
+}
+</style>
+</head>
+<body>
+<section class="content">
+    <!-- Desktop image -->
+    <div class="desktop-image">
+    <img src="assets/img2/treatIntro1_PC.webp">
+	<img src="assets/img2/treatIntro2_PC.webp">
+	<img src="assets/img2/treatIntro3_PC.webp">
+	<img src="assets/img2/treatIntro4_PC.webp">
+	<img src="assets/img2/treatIntro5_PC.webp" style="margin-bottom: 50px;">
+    </div>
+    
+    <!-- Mobile images -->
+    <div class="mobile-images">
+    <img src="assets/img2/treatIntro1_mobile.webp">
+	<img src="assets/img2/treatIntro2_mobile.webp">
+	<img src="assets/img2/treatIntro3_mobile.webp">
+	<img src="assets/img2/treatIntro4_mobile.webp">
+	<img src="assets/img2/treatIntro5_mobile.webp">
+	<img src="assets/img2/treatIntro6_mobile.webp">
+	<img src="assets/img2/treatIntro7_mobile.webp">
+	<img src="assets/img2/treatIntro8_mobile.webp">
+	<img src="assets/img2/treatIntro9_mobile.webp" style="margin-bottom: 50px;">
+    </div>
+</section>
+</body>
+</html>

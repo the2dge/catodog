@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mainrange for Cats </title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    .content picture, .content img {
+        width: 100%;
+        display: block;
+    }
+    .mobile-images {
+        display: none;
+    }
+    @media (max-width: 768px) {
+        .desktop-image {
+            display: none;
+        }
+        .mobile-images {
+            display: block;
+        }
+    }
+    @media screen and (min-width: 1440px) {
+    /* Target the 2nd and 3rd images */
+    .desktop-image img{
+        background: #f0f0f0;
+        padding-left: 10%; /* 10% padding on the left */
+        padding-right: 10%; /* 10% padding on the right */
+        box-sizing: border-box; /* Ensure padding is included in the element's width */
+    }
+}
+    /* Styles for image caption */
+    .image-container {
+        position: relative;
+        width: 100%;
+        margin-bottom: 0px;
+    }
+    .image-container img {
+        width: 100%;
+        display: block;
+    }
+    .mainrangeLearnmore {
+        position: absolute;
+        top: 25%; /* Adjust this value to move caption up or down */
+        left: 50%;
+        font-family: allrounder;
+        transform: translateX(-40%);
+        color: white;
+        background-color: rgba(171,150, 70, 0.1); /* Semi-transparent background */
+        padding: 2px 4px;
+        font-size: 3vw;
+        border-radius: 1px;
+        transition: 0.5s;
+        animation: learnmore-flash 5s infinite;
+    }
+    .mainrangeLearnmore:hover{cursor: pointer; color: lightgray; transition: 1.1s;}
+    .mobile-images .image-container .mainrangeLearnmore {
+        position: absolute;
+        top: 24.5%; /* Adjust this value to move caption up or down */
+        left: 50%;
+        transform: translateX(-46%);
+        color: white;
+        padding: 2px 4px;
+        font-size: 5vw;
+        border-radius: 1px;
+    }
+    @keyframes learnmore-flash {
+    0%{opacity: 1;}
+    25%{opacity: 0.5;}
+    50%{opacity: 0;}
+    75%{opacity: 0.5;}
+    100%{opacity: 1;}
+}
+</style>
+</head>
+<body>
+<section class="content">
+    <!-- Desktop image -->
+    <div class="desktop-image">
+    <img src="assets/img2/mainrangeIntro1_PC.webp">
+	<img src="assets/img2/mainrangeIntro2_PC.webp">
+    <img src="assets/img2/mainrangeIntro3_PC.webp">
+    <img src="assets/img2/mainrangeIntro4_PC.webp">
+    <img src="assets/img2/mainrangeIntro5_PC.webp">
+    <img src="assets/img2/mainrangeIntro6_PC.webp">
+    <img src="assets/img2/mainrangeIntro7_PC.webp">
+    <!-- Image 8 with caption -->
+        <div class="image-container">
+            <img src="assets/img2/mainrangeIntro8_PC.webp" alt="Mainrange Image 8">
+            <div class="mainrangeLearnmore">Learn More</div>
+        </div>
+    </div>
+    
+    <!-- Mobile images -->
+    <div class="mobile-images">
+    <img src="assets/img2/mainrangeIntro1_PC.webp">
+	<img src="assets/img2/mainrangeIntro2_mobile.webp">
+	<img src="assets/img2/mainrangeIntro3_mobile.webp">
+	<img src="assets/img2/mainrangeIntro4_mobile.webp">
+	<img src="assets/img2/mainrangeIntro5_mobile.webp">
+	<img src="assets/img2/mainrangeIntro6_mobile.webp">
+	<img src="assets/img2/mainrangeIntro7_mobile.webp">
+	<!-- Image 8 with caption -->
+        <div class="image-container">
+            <img src="assets/img2/mainrangeIntro8_mobile.webp" alt="Mainrange Image 8">
+            <div class="mainrangeLearnmore">Learn More</div>
+        </div>
+    <img src="assets/img2/mainrangeIntro9_mobile.webp" style="margin-bottom: 5vh;">
+	
+    </div>
+</section>
+
+</body>
+</html>
