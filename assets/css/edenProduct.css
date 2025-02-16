@@ -261,7 +261,7 @@
 @media (max-width:440px){
 
   .caption {left: 10%;}
-  .galleryLearnmore{position: absolute;bottom: 0vh; left: 18%;}
+  .galleryLearnmore{position: absolute;bottom: 0vh; left: 24%;}
   .galleryLearnmore img{max-width: 40vw;}
   #prevButton, #nextButton,#prevButton2, #nextButton2 {
   position: absolute;
@@ -297,4 +297,4 @@
 #section11 { background-image: url('../img2/fishDogfood_mobile.jpg'); background-position: center bottom; background-size: contain; background-repeat: no-repeat;}
 
 }
-@media (max-width:380px){.galleryLearnmore{position: absolute;bottom: 0vh; left: 18%;}
+@media (max-width:380px){.galleryLearnmore{position: absolute;bottom: 0vh; left: 24%;}
