@@ -51,6 +51,7 @@
             <li><a href="#mainRange">Eden 精選</a></li>
             <li><a href="#mainRange_cat">Eden Feline Feast 貓糧</a></li>
             <li><a href="#mainRange_dog">Eden The Cuisine 狗糧</a></li>
+	    <li><a href="#dogFood_explore">About Ingredigents 狗糧探索</a></li>
             <li><a href="#mainRange_treat">Eden Game Meat Air Dry Treat <br><span style="margin-left: 20px;">風乾零食</span></a></li>
             <li><a href="#partner">Reviews/顧客說</a></li>
             <li><a href="#partners">Partners/零售點</a></li>
@@ -229,6 +230,9 @@
     </section>  <!-- END of Treat container-->  
     <section class="dogfoodContainer"  style="display: none;position: relative; width: 100vw;margin:0;padding:0;transform: translateX(-10%);">   
     </section>  <!-- END of Treat container--> 
+    <section class="dogfoodExploreContainer" style="display: none">
+        position: relative; width: 100vw;margin:0;padding:0;transform: translateX(-10%);">  
+    </section>
     </section>
 
 
@@ -666,6 +670,7 @@ document.querySelector('a[href="#mainRange_cat"]').addEventListener('click', fun
     // Hide the treat and dogfood container
     document.querySelector('.treatContainer').style.display = "none";
     document.querySelector('.dogfoodContainer').style.display = "none";
+    document.querySelector('.dogfoodExploreContainer').style.display = 'none';
     
     // Load the mainrange HTML
     loadMainrangeImg('mainrange.html');
@@ -683,6 +688,7 @@ document.querySelector('a[href="#mainRange_dog"]').addEventListener('click', fun
     // Hide the treat and dogfood container
     document.querySelector('.treatContainer').style.display = "none";
     document.querySelector('.mainrangeContainer').style.display = "none";
+    document.querySelector('.dogfoodExploreContainer').style.display = 'none';
     
     // Load the dogfood HTML
     loadDogfoodImg('dogfood.html');
@@ -696,12 +702,28 @@ document.querySelector('a[href="#mainRange_dog"]').addEventListener('click', fun
     // Scroll slightly up
     scrollSomeUp();
 });
+document.querySelector('a[href="#dogFood_explore"]').addEventListener('click', function() {
+    // Hide the treat and dogfood container
+    document.querySelector('.treatContainer').style.display = "none";
+    document.querySelector('.mainrangeContainer').style.display = "none";
+    document.querySelector('.dogfoodContainer').style.display = "none";
+    
+    // Load the dogfood HTML
+    loadDogfoodExplore('ingredient.html');
+    
+    // Show the main range container
+    document.querySelector('.dogfoodExploreContainer').style.display = 'block';
+    
+    // Scroll slightly up
+    scrollSomeUp();
+});
 document.querySelectorAll('a[href="#mainRange_treat"]').forEach(function(middleSelect) {
     // Add click event listener to each "middleSelect" element
     middleSelect.addEventListener('click', function() {
         // Hide the main range container
         document.getElementById('mainrangeContainer').style.display = 'none';
         document.querySelector('.dogfoodContainer').style.display = "none";
+	document.querySelector('.dogfoodExploreContainer').style.display = 'none';
         
         // Load the treat HTML
         loadTreatImg('treat.html');
@@ -794,6 +816,15 @@ function loadDogfoodImg(treatFile) {
         .then(response => response.text())
         .then(data => {
             document.querySelector('.dogfoodContainer').innerHTML = data;
+            
+        })
+        .catch(error => console.error('Error loading treatFile', error));
+}
+function loadDogfoodExplore(treatFile) {
+     fetch(treatFile)
+        .then(response => response.text())
+        .then(data => {
+            document.querySelector('.dogfoodExploreContainer').innerHTML = data;
             
         })
         .catch(error => console.error('Error loading treatFile', error));
