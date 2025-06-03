@@ -274,7 +274,7 @@ a:hover {
     background: none;
 }
 #sidebar-wrapper.active {
-    right: 0px;
+    right: 5px;
     width: 260px;
     -webkit-transition: all 0.4s ease 0s;
     -moz-transition: all 0.4s ease 0s;
