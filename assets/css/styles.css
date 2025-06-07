@@ -158,7 +158,10 @@ a:hover {
     font-size: 1.2em;
     padding: 8px 8px;
 }
-
+.sidebar-nav .dropdown:nth-child(2){
+    padding-left: 0;
+}
+.rightSelect .dropdownD:hover{cursor: pointer;}
 /* Style the chevron */
 .sidebar-nav .dropdown .chevron {
     margin-left: 6px;
@@ -166,7 +169,7 @@ a:hover {
 }
 
 /* Submenu */
-.sidebar-nav .dropdown-menu {
+.sidebar-nav .dropdown-menu, .sidebar-nav .dropdown-menu1, .rightSelect .dropdown-menu{
     display: none;
     position: absolute;
     top: 100%; /* Directly below the parent item */
@@ -180,26 +183,45 @@ a:hover {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
+.rightSelect .dropdown-menu{
+    top:40%;
+    padding: 10px 10px;
+}
+.sidebar-nav .dropdown-menu1{
+   top: -200%; 
+   transition: 0.5s;
+}
 /* Submenu items */
-.sidebar-nav .dropdown-menu li {
+.sidebar-nav .dropdown-menu li ,.rightSelect .dropdown-menu li{
     list-style: none;
 }
 
-.sidebar-nav .dropdown-menu li a {
+.sidebar-nav .dropdown-menu li a,.rightSelect .dropdown-menu li a{
     display: block;
-    padding: 10px 16px;
+    padding: 15px 5px;
     color: white;
     text-decoration: none;
 }
 
 /* Hover on submenu items */
-.sidebar-nav .dropdown-menu li a:hover {
+.sidebar-nav .dropdown-menu li a:hover,.rightSelect .dropdown-menu li a:hover  {
     background-color: #f0f0f0;
+    transition: 0.5s;
 }
-
+.rightSelect .dropdown-menu li a:hover {color: gold}
 /* Show submenu on hover of parent */
 .sidebar-nav .dropdown:hover .dropdown-menu {
     display: block;
+}
+.sidebar-nav .dropdown:hover .dropdown-menu1 {
+    display: block;
+}
+.rightSelect h2.dropdownD:hover .dropdown-menu{
+    display: block;
+}
+.sidebar-nav .dropdown-menu1 li a:hover {
+    background-color: #f0f0f0;
+    transition: 0.5s;
 }
 #sidebar-wrapper {
     z-index: 99999;
@@ -294,7 +316,7 @@ a:hover {
     padding: 0;
     text-align: right;
     width: 100%;
-    padding-right: 5px;
+    padding-right: 10px;
 }
 .close-btn:hover {
     color: orange;
@@ -824,6 +846,7 @@ a:hover {
 }
 @media (max-width:768px){
 
+
 #mainRange{
    background-image: url(../img/mainrangeBg_mobile.jpeg);
    background-size: contain;
@@ -909,6 +932,7 @@ a:hover {
     background-position: center top;
     background-repeat: no-repeat;
 }
+/*
 #features .container .row:nth-child(1){
     padding:20px 20px 0 0;
     background-image: url(../img2/featureBg.jpg);
@@ -929,7 +953,7 @@ a:hover {
     height: auto;
     width: 100vw;
     margin-top: 20vh;
-}
+}*/
 #features .container .row:nth-child(3) .title-box{margin-top: -150px}
 
 .featureBgImg{width: 100vw}
