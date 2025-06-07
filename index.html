@@ -7,8 +7,7 @@
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="英國EDEN HOLISTIC PET FOODS香港及澳門獨家代理，提供優質貓狗寵物食品。我們致力於為您的寵物提供健康美味的飲食選擇。">
-    <meta name="keywords" content="寵物食品, 貓糧, 狗糧, 香港寵物食品, 代理商, 健康寵物食品">
+
 	<!-- css -->
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/css/ionicons.min.css">
@@ -45,7 +44,7 @@
 	<!-- ****************************** Sidebar ************************** -->
     
 	<nav id="sidebar-wrapper">
-		<a id="menu-close" href="#" class="close-btn toggle"><i class="ion-ios-close-empty"></i></a>
+		<a id="menu-close" href="#" class="close-btn toggle"><i class="ion-ios-close-empty"  style="padding-right: 10px;"></i></a>
             <ul class="sidebar-nav">
             <li><a href="#home">Home</a></li>
             <li><a href="#mainRange">Eden 精選</a></li>
@@ -60,8 +59,8 @@
 
             <li><a href="#mainRange_treat">Eden Game Meat Air Dry Treat <br><span style="margin-left: 20px;">風乾零食</span></a></li>
             <li><a href="#partner">Reviews/顧客說</a></li>
-            <li class="dropdown"><a href="#partners">Partners/零售點 <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
-                <ul class="dropdown-menu">
+            <li class="dropdown"><a href="#">Partners/零售點 <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                <ul class="dropdown-menu1">
                     <li data-file="hk-shop.html" class="location-icon"><a href="#">Hong Kong Island 香港島</a></li>
                     <li data-file="kowloonShop.html" class="location-icon"><a href="#">Kowloon 九龍</a></li>
                     <li data-file="ntShop.html" class="location-icon"><a href="#">New Territory 新界</a></li>
@@ -224,7 +223,12 @@
                 <img src="assets/img/dogFood.webp" alt="Dog Food">
                 </div>
                
-               <h2>DOG DRY FOOD<br>狗乾糧系列 </h2>
+               <h2 class="dropdownD">DOG DRY FOOD<br>狗乾糧系列 
+                <ul class="dropdown-menu">
+                    <li><a href="#mainRange_dog">Eden The Cuisine 狗糧簡介</a></li>
+                    <li><a href="#dogFood_explore">About Ingredients 狗糧探索</a></li>
+                </ul>
+               </h2>
                
             </div>
             </div><!--//END of selectCarousel-->
@@ -243,8 +247,7 @@
     </section>  <!-- END of Treat container-->  
     <section class="dogfoodContainer"  style="display: none;position: relative; width: 100vw;margin:0;padding:0;transform: translateX(-10%);">   
     </section>  <!-- END of Treat container--> 
-    <section class="dogfoodExploreContainer" style="display: none">
-        position: relative; width: 100vw;margin:0;padding:0;transform: translateX(-10%);">  
+    <section class="dogfoodExploreContainer" style="display: none;position: relative; width: 100vw;margin:0;padding:0;transform: translateX(-10%);">  
     </section>
     </section>
 
@@ -424,6 +427,15 @@
         </section>-->
         <section class="row col-lg-12">
             <div id="event-slider" class="owl-carousel" style="padding: 20px 0">
+                    <div class="item" style="text-align: center; color:#ab964e;margin: 0 10px"> <!-- Center align the text -->
+                        <div class="col-md-12 col-xs-12">
+                        <h3>SHOW: MARKETOO X DINDONG
+</h3>
+                        <h3>VENUE: THE MILLS</h3>
+                        <h4>DATE: 21~26 DEC, 2024</h4></div>
+                        <div class="col-md-12 col-xs-12">
+                        <img src="assets/img/event4_PC_new.webp" style="width: 100%; margin-top: -50px" class="events-PC"> </div>
+                        <img src="assets/img/event4_mobile.png"  style="width: 100%; margin-top: -200px" class="events-mobile"> </div>
                     <div class="item" style="text-align: center; color:#ab964e;margin: 0 10px"> <!-- Center align the text -->
                         <div class="col-md-12 col-xs-12">
                         <h3>SHOW:  SIP & SHOP SUSTAINABLY
@@ -697,6 +709,32 @@ document.querySelector('a[href="#mainRange_cat"]').addEventListener('click', fun
     // Scroll slightly up
     scrollSomeUp();
 });
+
+function handleMainrangeDogFoodClick(e) {
+    e.preventDefault(); // Prevent default anchor jump
+
+    // Hide other containers
+    document.querySelector('.treatContainer').style.display = "none";
+    document.querySelector('.mainrangeContainer').style.display = "none";
+    document.querySelector('.dogfoodExploreContainer').style.display = 'none';
+
+    // Load the dogfood HTML
+    loadDogfoodImg('dogfood.html');
+    
+    // Load the gallery HTML
+    loadGallery('gallery3.html', dogfood_fileNames);
+    
+
+    // Show target container
+    document.querySelector('.dogfoodContainer').style.display = 'block';
+
+    // Scroll slightly up
+    scrollSomeUp();
+}
+document.querySelectorAll('a[href="#mainRange_dog"]').forEach(link => {
+    link.addEventListener('click', handleMainrangeDogFoodClick);
+});
+/*
 document.querySelector('a[href="#mainRange_dog"]').addEventListener('click', function() {
     // Hide the treat and dogfood container
     document.querySelector('.treatContainer').style.display = "none";
@@ -714,7 +752,31 @@ document.querySelector('a[href="#mainRange_dog"]').addEventListener('click', fun
     
     // Scroll slightly up
     scrollSomeUp();
+});*/
+// Shared event handler function
+function handleDogFoodExploreClick(e) {
+    e.preventDefault(); // Prevent default anchor jump
+
+    // Hide other containers
+    document.querySelector('.treatContainer').style.display = "none";
+    document.querySelector('.mainrangeContainer').style.display = "none";
+    document.querySelector('.dogfoodContainer').style.display = "none";
+
+    // Load dogfood content
+    loadDogfoodExplore('ingredient.html');
+
+    // Show target container
+    document.querySelector('.dogfoodExploreContainer').style.display = 'block';
+
+    // Scroll slightly up
+    scrollSomeUp();
+}
+
+// Attach event to all matching links (sidebar + rightSelect dropdown)
+document.querySelectorAll('a[href="#dogFood_explore"]').forEach(link => {
+    link.addEventListener('click', handleDogFoodExploreClick);
 });
+/*
 document.querySelector('a[href="#dogFood_explore"]').addEventListener('click', function() {
     // Hide the treat and dogfood container
     document.querySelector('.treatContainer').style.display = "none";
@@ -729,14 +791,14 @@ document.querySelector('a[href="#dogFood_explore"]').addEventListener('click', f
     
     // Scroll slightly up
     scrollSomeUp();
-});
+});*/
 document.querySelectorAll('a[href="#mainRange_treat"]').forEach(function(middleSelect) {
     // Add click event listener to each "middleSelect" element
     middleSelect.addEventListener('click', function() {
         // Hide the main range container
         document.getElementById('mainrangeContainer').style.display = 'none';
         document.querySelector('.dogfoodContainer').style.display = "none";
-	document.querySelector('.dogfoodExploreContainer').style.display = 'none';
+        document.querySelector('.dogfoodExploreContainer').style.display = 'none';
         
         // Load the treat HTML
         loadTreatImg('treat.html');
@@ -758,6 +820,7 @@ document.querySelectorAll('.leftSelect').forEach(function(leftSelect) {
         // Hide the treat container
         document.querySelector('.treatContainer').style.display = "none";
         document.querySelector('.dogfoodContainer').style.display = "none";
+        document.querySelector('.dogfoodExploreContainer').style.display = 'none';
         
         // Load the mainrange HTML
         loadMainrangeImg('mainrange.html');
@@ -773,12 +836,13 @@ document.querySelectorAll('.leftSelect').forEach(function(leftSelect) {
     });
 });
 // Select all elements with the class "rightSelect"
-document.querySelectorAll('.rightSelect').forEach(function(rightSelect) {
+document.querySelectorAll('.rightSelect img').forEach(function(rightSelect) {
     // Add click event listener to each "leftSelect" element
     rightSelect.addEventListener('click', function() {
         // Hide the treat and catfood container
         document.querySelector('.treatContainer').style.display = "none";
         document.querySelector('.mainrangeContainer').style.display = "none";
+        document.querySelector('.dogfoodExploreContainer').style.display = 'none';
         
         // Load the dogfood HTML
         loadDogfoodImg('dogfood.html');
@@ -793,6 +857,7 @@ document.querySelectorAll('.rightSelect').forEach(function(rightSelect) {
         scrollSomeUp();
     });
 });
+
 // Select all elements with the class "middleSelect"
 document.querySelectorAll('.middleSelect').forEach(function(middleSelect) {
     // Add click event listener to each "middleSelect" element
@@ -1014,6 +1079,7 @@ document.getElementById('backTopBtn').addEventListener('click', function() {
     document.getElementById('mainrangeContainer').style.display = 'none';
     document.getElementById('gallery').style.display = 'none';
     document.querySelector('.treatContainer').style.display = 'none';
+    document.querySelector('.dogfoodExploreContainer').style.display = 'none';
 
 });
 </script>
@@ -1043,7 +1109,6 @@ document.querySelectorAll('.sidebar-nav .dropdown > a').forEach(link => {
 </script>
 
 <script type="text/javascript">
-
 
 function adjustTextBasedOnViewport() {
         // Clear the characters array if needed
