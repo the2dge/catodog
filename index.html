@@ -59,7 +59,8 @@
 
             <li><a href="#mainRange_treat">Eden Game Meat Air Dry Treat <br><span style="margin-left: 20px;">風乾零食</span></a></li>
             <li><a href="#partner">Reviews/顧客說</a></li>
-            <li class="dropdown"><a href="#">Partners/零售點 <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+            <li class="dropdown">Partners 零售點 <i class="fa fa-chevron-down" aria-hidden="true"></i>
+              <!--  <a href="#">Partners/零售點 <i class="fa fa-chevron-down" aria-hidden="true"></i></a>-->
                 <ul class="dropdown-menu1">
                     <li data-file="hk-shop.html" class="location-icon"><a href="#">Hong Kong Island 香港島</a></li>
                     <li data-file="kowloonShop.html" class="location-icon"><a href="#">Kowloon 九龍</a></li>
@@ -217,17 +218,30 @@
                
             </div>
             
-            
-            <div class="rightSelect">
+         <!--  <div class="rightSelect">
+              <div class="dropdownD">
+               <ul class="dropdown-menu" style="display: none">
+                    <li><a href="#mainRange_dog">Eden The Cuisine 狗糧簡介</a></li>
+                    <li><a href="#dogFood_explore">About Ingredients 狗糧探索</a></li>
+                </ul>
+               <div>
+                <img src="assets/img/dogFood.webp" alt="Dog Food">
+                </div>
+               
+               <h2>DOG DRY FOOD<br>狗乾糧系列 </h2>
+               </div>
+            </div>-->
+           <div class="rightSelect">
+               <ul class="dropdown-menu">
+                    <li><a href="#mainRange_dog">Eden The Cuisine 狗糧簡介</a></li>
+                    <li><a href="#dogFood_explore">About Ingredients 狗糧探索</a></li>
+                </ul>
                <div>
                 <img src="assets/img/dogFood.webp" alt="Dog Food">
                 </div>
                
                <h2 class="dropdownD">DOG DRY FOOD<br>狗乾糧系列 
-                <ul class="dropdown-menu">
-                    <li><a href="#mainRange_dog">Eden The Cuisine 狗糧簡介</a></li>
-                    <li><a href="#dogFood_explore">About Ingredients 狗糧探索</a></li>
-                </ul>
+                
                </h2>
                
             </div>
@@ -429,12 +443,21 @@
             <div id="event-slider" class="owl-carousel" style="padding: 20px 0">
                     <div class="item" style="text-align: center; color:#ab964e;margin: 0 10px"> <!-- Center align the text -->
                         <div class="col-md-12 col-xs-12">
+                        <h3>SHOW: HONG KONG PETSHOW 2025
+</h3>
+                        <h3>VENUE: Hong Kong Conventional Centre</h3>
+                        <h4>DATE:  6-9 FEB 2025</h4></div>
+                        <div class="col-md-12 col-xs-12">
+                        <img src="assets/img/event5_pc.webp" style="width: 100%; margin-top: 30px" class="events-PC"> </div>
+                        <img src="assets/img/event5_mobile.webp"  style="width: 100%; margin-top: -250px" class="events-mobile"> </div>
+                    <div class="item" style="text-align: center; color:#ab964e;margin: 0 10px"> <!-- Center align the text -->
+                        <div class="col-md-12 col-xs-12">
                         <h3>SHOW: MARKETOO X DINDONG
 </h3>
                         <h3>VENUE: THE MILLS</h3>
                         <h4>DATE: 21~26 DEC, 2024</h4></div>
                         <div class="col-md-12 col-xs-12">
-                        <img src="assets/img/event4_PC_new.webp" style="width: 100%; margin-top: -50px" class="events-PC"> </div>
+                        <img src="assets/img/event4_pc.webp" style="width: 100%; margin-top: 0px" class="events-PC"> </div>
                         <img src="assets/img/event4_mobile.png"  style="width: 100%; margin-top: -200px" class="events-mobile"> </div>
                     <div class="item" style="text-align: center; color:#ab964e;margin: 0 10px"> <!-- Center align the text -->
                         <div class="col-md-12 col-xs-12">
@@ -836,6 +859,7 @@ document.querySelectorAll('.leftSelect').forEach(function(leftSelect) {
     });
 });
 // Select all elements with the class "rightSelect"
+/*
 document.querySelectorAll('.rightSelect img').forEach(function(rightSelect) {
     // Add click event listener to each "leftSelect" element
     rightSelect.addEventListener('click', function() {
@@ -857,7 +881,7 @@ document.querySelectorAll('.rightSelect img').forEach(function(rightSelect) {
         scrollSomeUp();
     });
 });
-
+*/
 // Select all elements with the class "middleSelect"
 document.querySelectorAll('.middleSelect').forEach(function(middleSelect) {
     // Add click event listener to each "middleSelect" element
