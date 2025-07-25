@@ -1571,7 +1571,7 @@ ul.slick-dots{margin: 50px auto;}
 .facebookLink, .igLink{max-width: 100px; width: 12vw; margin: 16px;}
 .igLink{padding-top: 10px; margin-left: 10px;}*/
 @media (max-width: 768px){
-    #contact{margin-top: -18vh;padding: 0}
+    #contact{margin-top: 0vh;padding: 0}
     .contactPC {display: none;} /* Hide PC version image */
     .contactMobile{display: block; height: auto; width: 100%}
 
