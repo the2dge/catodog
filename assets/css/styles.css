@@ -1585,8 +1585,8 @@ ul.slick-dots{margin: 50px auto;}
 .contactMobile {display: none;} /* Hide mobile image and links by default */
 
 .socialMedia{width: 50vw; height: 6vh;bottom: 22vh; left: 60vw;}
-.facebookLink img{width: 6vw;max-width: 40px}
-.igLink img{margin-left: 10px;width: 4.3vw; max-width: 44px;padding-top: 4px;}
+.facebookLink{width: 6vw;max-width: 40px}
+.igLink{margin-left: 10px;width: 4.3vw; max-width: 44px;padding-top: 4px;}
 }
 
 
