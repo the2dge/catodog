@@ -1546,7 +1546,7 @@ ul.slick-dots{margin: 50px auto;}
     #events .container .row .title-box{
         width: 55vw;
     }
-    #event-slider .owl-dots{height: 14px;display: flex; justify-content: center; align-items: center; margin: 15px auto; transform: translateY(-20vh);}
+    #event-slider .owl-dots{height: 14px;display: flex; justify-content: center; align-items: center; margin: 15px auto; transform: translateY(-21vh);}
     .events-mobile{display: block}
     .events-PC{display: none !important;}
 }
